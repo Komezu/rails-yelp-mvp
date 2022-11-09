@@ -1,10 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 a {
   text-decoration: none;
   color: #296218;
 }
 
 form {
-  margin: 25px auto;
+  margin: 20px 0 25px 0;
+}
+
+input[type="submit"] {
+  margin-top: 8px;
 }
 
 .container {
@@ -18,5 +28,10 @@ form {
 }
 
 .radio_buttons {
-  margin-right: 10px;
+  margin-right: 5px;
+}
+
+.inline {
+  display: inline-block;
+  margin-right: 20px;
 }

@@ -21,7 +21,11 @@
       </li>
     <% end %>
   </ul>
-  <%= link_to "Leave a review", new_restaurant_review_path(@restaurant) %>
-  <br><br>
+  <hr>
+
+  <%# link_to "Leave a review", new_restaurant_review_path(@restaurant) %>
+  <h5>Leave a review</h5>
+  <%= render "reviews/form", restaurant: @restaurant, review: @review %>
+
   <%= link_to "Back to list", restaurants_path %>
 </div>
