@@ -1,0 +1,27 @@
+<div class="container">
+  <h2><%= @restaurant.name %></h2>
+
+  <p>
+    This restaurant, located at <em><%= @restaurant.address %></em>,
+    offers <strong><%= @restaurant.category.capitalize %></strong> cuisine.
+  </p>
+
+  <p>Contact them at: <%= @restaurant.phone_number %></p>
+
+  <h5>
+    Reviews (<%= @restaurant.reviews.count %>)
+    <em>(rating: <%= @restaurant.reviews.count.zero? ? "no ratings yet" : @restaurant.average_rating %>)</em>
+  </h5>
+
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+      <li>
+        (<%= "⭐️" * review.rating %>)
+        <%= review.content %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "Leave a review", new_restaurant_review_path(@restaurant) %>
+  <br><br>
+  <%= link_to "Back to list", restaurants_path %>
+</div>
