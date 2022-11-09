@@ -2,7 +2,6 @@
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :phone_number %>
-  <%= f.label :category, class: "label-category" %>
-  <%= f.select :category, Restaurant::CATEGORIES.map { |c| [c.capitalize, c] } %><br><br>
+  <%= f.input :category, as: :select, collection: Restaurant::CATEGORIES.map { |c| [c.capitalize, c] } %><br>
   <%= f.submit %>
 <% end %>
